@@ -16,10 +16,15 @@
     />
     <title>Frontend Mentor | Blog preview card</title>
     <style>
-      body {
-        font-family: "Source Sans Pro", Arial, sans-serif;
+      /* Resetting default browser styles for consistency */
+      * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
+      }
+
+      body {
+        font-family: "Source Sans Pro", Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -35,13 +40,16 @@
         box-shadow: 12px 12px 0 0 black; /* Solid black shadow */
         padding: 20px; /* Padding inside the card */
         max-width: 300px; /* Adjusted maximum width */
-        height: 59%;
+        min-height: 550px; /* Adjusted minimum height */
         text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Distributes space between elements */
       }
 
       /* Image styling */
       .blog-image {
-        width: 100%; /* Adjusted image width to fit new card width */
+        width: 100%;
         height: auto;
         border-radius: 8px;
         margin-bottom: 20px;
@@ -95,7 +103,6 @@
         font-size: 11px;
         text-align: center;
         color: hsl(228, 45%, 44%);
-        margin-top: 30px;
       }
 
       .attribution a {
@@ -110,22 +117,24 @@
   </head>
   <body>
     <div class="blog-card">
-      <img
-        src="assets/images/illustration-article.svg"
-        alt="Blog Image"
-        class="blog-image"
-      />
-      <div class="category-box">Learning</div>
-      <div class="blog-content">
-        <div class="blog-details">Published 21 Dec 2023</div>
-        <div class="blog-title">HTML & CSS foundations</div>
-        <p class="blog-details">
-          These languages are the backbone of every website, defining structure,
-          content, and presentation.
-        </p>
-        <div class="author-info">
-          <div class="author-avatar"></div>
-          <div>By Greg Hooper</div>
+      <div>
+        <img
+          src="assets/images/illustration-article.svg"
+          alt="Blog Image"
+          class="blog-image"
+        />
+        <div class="category-box">Learning</div>
+        <div class="blog-content">
+          <div class="blog-details">Published 21 Dec 2023</div>
+          <div class="blog-title">HTML & CSS foundations</div>
+          <p class="blog-details">
+            These languages are the backbone of every website, defining
+            structure, content, and presentation.
+          </p>
+          <div class="author-info">
+            <div class="author-avatar"></div>
+            <div>By Greg Hooper</div>
+          </div>
         </div>
       </div>
       <div class="attribution">
