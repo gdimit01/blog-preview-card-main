@@ -1,34 +1,139 @@
+<!-- /path/to/blog-preview-card.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Blog preview card</title>
+    <style>
+      body {
+        font-family: "Source Sans Pro", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #ffde59; /* Background color of the body */
+      }
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+      /* Card styling */
+      .blog-card {
+        background-color: white;
+        border: 1px solid black; /* Black border for outline */
+        border-radius: 20px; /* Rounded corners */
+        box-shadow: 12px 12px 0 0 black; /* Solid black shadow */
+        padding: 20px; /* Padding inside the card */
+        max-width: 300px; /* Adjusted maximum width */
+        height: 53%;
+        text-align: left;
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      /* Image styling */
+      .blog-image {
+        width: 100%; /* Adjusted image width to fit new card width */
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 20px;
+      }
 
-  Learning
+      /* Title styling */
+      .blog-title {
+        font-size: 24px;
+        font-weight: 600; /* Bold font for title */
+        color: black; /* Black font color */
+        margin-bottom: 10px;
+      }
 
-  Published 21 Dec 2023
+      /* Category box styling */
+      .category-box {
+        background-color: #ffde59; /* Yellow background */
+        color: black;
+        font-weight: bold;
+        padding: 5px 10px;
+        border-radius: 4px;
+        display: inline-block;
+        margin-bottom: 10px;
+      }
 
-  HTML & CSS foundations
+      /* Blog details styling */
+      .blog-details {
+        color: grey;
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
 
-  These languages are the backbone of every website, defining structure, content, and presentation.
+      /* Author information styling */
+      .author-info {
+        display: flex;
+        align-items: center;
+      }
 
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      /* Author avatar styling */
+      .author-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-image: url("./assets/images/image-avatar.webp");
+        background-size: cover;
+        margin-right: 10px;
+      }
+
+      /* Attribution section styling */
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: hsl(228, 45%, 44%);
+        margin-top: 30px;
+      }
+
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+        text-decoration: none;
+      }
+
+      .attribution a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="blog-card">
+      <img
+        src="assets/images/illustration-article.svg"
+        alt="Blog Image"
+        class="blog-image"
+      />
+      <div class="category-box">Learning</div>
+      <div class="blog-content">
+        <div class="blog-details">Published 21 Dec 2023</div>
+        <div class="blog-title">HTML & CSS foundations</div>
+        <p class="blog-details">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+        <div class="author-info">
+          <div class="author-avatar"></div>
+          <div>By Greg Hooper</div>
+        </div>
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Georgi Dimitrov</a>.
+      </div>
+    </div>
+  </body>
 </html>
